@@ -1,0 +1,11 @@
+Voici nos chambres:
+
+<ul>
+  <% @rooms.each do |room| %>
+  <li>
+  <%= link_to "Chambre #{room.room_number} : peut accueillir #{room.capacity} invités - prix par nuit: #{room.daily_price}", hotel_room_path(@hotel, room)  %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "Retour à la page d'accueil", root_path(@hotel) %>

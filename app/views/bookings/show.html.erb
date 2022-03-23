@@ -1,0 +1,9 @@
+Récapitulatif de votre réservation :
+
+<ul style='list-style: none'>
+  <li> Du <%= @booking.arrival %> au <%= @booking.departure %> </li>
+  <li> Prix total : <%= @booking.total_price %>€ </li>
+  <li> Votre séjour est de <%= @booking.night_number %> nuits </li>
+</ul>
+
+<%= link_to "Retour à la page d'accueil", root_path(@hotel) %>
